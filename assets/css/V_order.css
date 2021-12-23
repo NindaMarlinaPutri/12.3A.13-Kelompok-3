@@ -1,0 +1,82 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #181818;
+}
+
+.detail {
+  background-color: white;
+  padding: 20px 10px;
+}
+
+.gambar {
+  background-color: #cacaca;
+  overflow: hidden;
+  width: 100%;
+  height: 20em;
+}
+
+.gambar img {
+  width: 100%;
+}
+
+.produk {
+  text-align: center;
+}
+
+.desk {
+  width: 100%;
+  margin: auto;
+}
+
+.nama {
+  color: #2b2b2b;
+  font-size: 22px;
+  font-weight: 600;
+
+}
+
+.harga {
+  color: #7709BB;
+  font-size: 30px;
+  font-weight: 550;
+}
+
+.rate {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.value {
+  color: #7709BB;
+}
+
+.desc p {
+  height: 9rem;
+  opacity: 0.85;
+}
+
+.more {
+  color: white;
+}
+
+form .kolom {
+  background-color: rgb(247, 247, 247);
+  border-bottom: 2px solid #cacaca;
+  box-shadow: 100 10 black;
+}
+
+form .kolom:focus {
+  background-color: rgb(242, 242, 242);
+  border-bottom: 2px solid #cacaca;
+  box-shadow: 100 10 black;
+}

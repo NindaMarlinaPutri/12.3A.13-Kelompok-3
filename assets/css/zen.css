@@ -1,0 +1,211 @@
+.btn-zen {
+  background-color: #d60505;
+  color: #f1e8f8;
+}
+.bg-zen {
+  background-color: #d60505;
+}
+
+.name-zen {
+  color: #d60505;
+}
+.img-bulet {
+  border-radius: 100%;
+}
+
+.img-prof {
+  height: 300px;
+  width: 300px;
+  
+  overflow: hidden;
+}
+.btn-zen:hover {
+  background-color: #5d0b91;
+  color: #EEBA34;;
+}
+
+.btn-zeny {
+  color: #EEBA34;
+}
+
+.text-zen {
+  color: #d60505;
+}
+.text-zend {
+  color: #d60505;
+}
+.text-zeny {
+  color: #EEBA34;
+}
+
+.bg-inputzen:read-write {
+  display: block;
+  width: 100%;
+  height: calc(1.5 em + 0.75 rem + 2 px);
+  padding: 0.375 rem 0.75 rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #83778d;
+  background-clip: padding-box;
+  border: 1 px solid #d1a1f3;
+  border-radius: 0.35 rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  background-color: #f5e7ff;
+
+}
+
+.bg-inputw {
+  background-color: #f5e7ff;
+
+}
+.form-control {
+  border: 1 px solid #d1a1f3;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem #d1a1f3;
+}
+
+.bg-zend {
+  background-color: #2c2730;
+
+}
+.bg-zenw {
+  background-color: #f7eeff;
+
+}
+
+.nama {
+  color: rgb(53, 53, 53);
+  font-size: 16px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis ;
+}
+
+.nama:hover {
+  color: #c21414;
+}
+
+.kotak {
+  background-color: white;
+}
+
+.kotak:hover {
+  background-color: #e5c8ff;
+
+}
+.harga {
+  font-size: 18px;
+  color: #912ece;
+  font-weight: 700;
+}
+
+.btn {
+  border-radius: 20px;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #181818;
+}
+
+.detail {
+  background-color: white;
+  padding: 20px 10px;
+}
+
+.gambarr {
+  background-color: #cacaca;
+  overflow: hidden;
+}
+
+.gambarr img {
+  width: 100%;
+  height: 100%;
+}
+
+.produk {
+  text-align: center;
+}
+
+.desk {
+  width: 100%;
+  margin: auto;
+}
+
+.namaa {
+  color: #2b2b2b;
+  font-size: 22px;
+  font-weight: 600;
+
+}
+
+.hargaa {
+  color: #d60505;
+  font-size: 30px;
+  font-weight: 550;
+}
+
+.rate {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.value {
+  color: #d60505;
+}
+
+.desc p {
+  height: 9rem;
+  opacity: 0.85;
+}
+
+.more {
+  color: white;
+}
+
+form .kolom {
+  background-color: rgb(247, 247, 247);
+  border-bottom: 2px solid #cacaca;
+  box-shadow: 100 10 black;
+}
+
+form .kolom:focus {
+  background-color: rgb(242, 242, 242);
+  border-bottom: 2px solid #cacaca;
+  box-shadow: 100 10 black;
+}
+
+.our {
+  border-radius: 8px 8px 8px;
+  padding: 5px;
+  background-color: #262229;
+  overflow: hidden;
+}
+
+.our img {
+  border-radius: 8px 8px 8px;
+  width: 100%;
+  height: 400px;
+
+}
+
+.nm-team {
+  font-size: 20px;
+  opacity: .9;
+  font-weight: 600;
+  color: #d60505;
+
+}
