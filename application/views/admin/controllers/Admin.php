@@ -11,6 +11,7 @@ class Admin extends CI_Controller
     is_logged_in();
   }
 
+
   public function index()
   {
     $data['title'] = "Dashboard ";
@@ -22,6 +23,7 @@ class Admin extends CI_Controller
     $this->load->view('admin/index', $data);
     $this->load->view('templates/footer');
   }
+
 
   // kontak admin
   public function kontak()
@@ -35,6 +37,7 @@ class Admin extends CI_Controller
     $this->load->view('admin/kontak', $data);
     $this->load->view('templates/footer');
   }
+
 
   public function Detail()
   {
@@ -63,6 +66,7 @@ class Admin extends CI_Controller
     $this->load->view('templates/footer');
   }
 
+
   public function settingProfile()
   {
     $data['title'] = "Edit Profile";
@@ -74,6 +78,7 @@ class Admin extends CI_Controller
     $this->load->view('templates/footer');
   }
 
+
   public function editProfile()
   {
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
@@ -81,8 +86,10 @@ class Admin extends CI_Controller
     $id = $this->input->post('id');
     $alamat = $this->input->post('alamat');
 
+
     // cek gambar
     $upload_image = $_FILES['image']['name'];
+
 
     if ($upload_image == true) {
 
@@ -113,22 +120,9 @@ class Admin extends CI_Controller
       ');
     redirect('admin/settingProfile');
   }
-  // =========================================================================================== //
 
-  public function wisata()
-  {
-    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-    $data['wisata'] = $this->db->get('wisata')->result_array();
-    $data['kategori'] = ['Pendakian', 'Curug', 'Pemandian', 'Candi', 'Taman'];
 
-    $data['title'] = "Manage Wisata";
-    $this->load->view('templates/header', $data);
-    $this->load->view('templates/sidebar', $data);
-    $this->load->view('templates/topbar', $data);
-    $this->load->view('admin/atur-wisata', $data);
-    $this->load->view('templates/footer');
-  }
-
+  // tambah wisaata
   public function addWisata()
   {
     $data['title'] = "add Wisata";
@@ -172,6 +166,8 @@ class Admin extends CI_Controller
     redirect('admin/wisata');
   }
 
+
+  // edit wisata
   public function updateWisata()
   {
     $data['title'] = "Update Wisata";
@@ -207,6 +203,7 @@ class Admin extends CI_Controller
     } else {
     }
 
+
     $this->db->set('nama_wisata', $nama);
     $this->db->set('kategori', $kategori);
     $this->db->set('tiket', $tiket);
@@ -220,30 +217,18 @@ class Admin extends CI_Controller
     redirect('admin/wisata');
   }
 
-  public function fillWisata()
+  public function wisata()
   {
-    $key =  $this->uri->segment(3);
-
-    $data['title'] = "Wisata " . $key;
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-    $data['wisata'] = $this->m_data->fillWisata($key)->result();
+    $data['wisata'] = $this->db->get('wisata')->result_array();
+    $data['kategori'] = ['Pendakian', 'Curug', 'Pemandian', 'Candi', 'Taman'];
 
+    $data['title'] = "Manage Wisata";
     $this->load->view('templates/header', $data);
     $this->load->view('templates/sidebar', $data);
     $this->load->view('templates/topbar', $data);
-    $this->load->view('admin/index', $data);
+    $this->load->view('admin/atur-wisata', $data);
     $this->load->view('templates/footer');
-  }
-
-  public function deleteWisata()
-  {
-    $id =  $this->uri->segment(3);
-    $this->db->where('id', $id);
-    $this->db->delete('wisata');
-
-    $this->session->set_flashdata('pesan', '<div
-    class="alert alert-success alert-message" role="alert">Wisata Berhasil Di Hapus.</div>');
-    redirect('admin/wisata');
   }
 
   public function kategori()
@@ -260,6 +245,35 @@ class Admin extends CI_Controller
     $this->load->view('admin/kategori', $data);
     $this->load->view('templates/footer');
   }
+
+  public function fillWisata()
+  {
+    $key =  $this->uri->segment(3);
+
+    $data['title'] = "Wisata " . $key;
+    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+    $data['wisata'] = $this->m_data->fillWisata($key)->result();
+
+
+    $this->load->view('templates/header', $data);
+    $this->load->view('templates/sidebar', $data);
+    $this->load->view('templates/topbar', $data);
+    $this->load->view('admin/index', $data);
+    $this->load->view('templates/footer');
+  }
+
+
+  public function deleteWisata()
+  {
+    $id =  $this->uri->segment(3);
+    $this->db->where('id', $id);
+    $this->db->delete('wisata');
+
+    $this->session->set_flashdata('pesan', '<div
+    class="alert alert-success alert-message" role="alert">Wisata Berhasil Di Hapus.</div>');
+    redirect('admin/wisata');
+  }
+
 
   public function pesan()
   {
